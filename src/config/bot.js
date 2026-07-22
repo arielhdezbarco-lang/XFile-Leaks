@@ -263,7 +263,7 @@ export const botConfig = {
       description: "Tu espacio de confianza para una atención rápida y segura.\n\nAquí encontrarás nuestro centro de soporte, donde podrás resolver dudas, abrir tickets y recibir la mejor asistencia posible.\n\nSi necesitas ayuda, no dudes en contactarnos.",
 
       // Imagen grande (como la de la luna)
-      image: "https://media.discordapp.net/attachments/1394810228578582689/1420093803733188718/asdasd.gif?ex=6a60f86a&is=6a5fa6ea&hm=470b0ce21fdc51e1772ac1bc25a31057abc14cd7bfee7616d8cdb79d0ff04c7c&=", 
+      image: "https://cdn.discordapp.com/icons/1416544949083836458/20d4b89d497949800586f6d7eeefa48e.webp?size=1024, 
       // ← Cambia esta URL por la de tu imagen
 
       thumbnail: null,
