@@ -213,19 +213,13 @@ export const botConfig = {
   // TICKET SYSTEM
   // =========================
   tickets: {
-    // Categoría donde se crean los nuevos tickets
+    // Category ID where new tickets are created (null = no forced category).
     defaultCategory: null,
 
-    // Categoría donde se archivan los tickets cerrados
-    archiveCategory: null,
-
-    // Canal de logs de tickets
-    logChannel: null,
-
-    // Roles que pueden ver y gestionar tickets
+    // Role IDs allowed to manage/support tickets.
     supportRoles: [],
 
-    // Sistema de prioridades
+    // Priority options users/staff can assign.
     priorities: {
       none: {
         emoji: "⚪",
@@ -253,41 +247,54 @@ export const botConfig = {
         label: "Urgent",
       },
     },
+
+    // Default priority for new tickets.
     defaultPriority: "none",
 
-    // =============================================
-    // CONFIGURACIÓN DEL PANEL DE TICKETS (IMPORTANTE)
-    // =============================================
-    panel: {
-      title: "Centro de Soporte",
-      description: "Tu espacio de confianza para una atención rápida y segura.\n\nAquí encontrarás nuestro centro de soporte, donde podrás resolver dudas, abrir tickets y recibir la mejor asistencia posible.\n\nSi necesitas ayuda, no dudes en contactarnos.",
+    // Category ID where closed tickets are archived.
+    archiveCategory: null,
 
-      // Imagen grande (como la de la luna)
-      image: "https://cdn.discordapp.com/icons/1416544949083836458/20d4b89d497949800586f6d7eeefa48e.webp?size=1024, 
-      // ← Cambia esta URL por la de tu imagen
+    // Channel ID where ticket logs are sent.
+    logChannel: null,
+  },
 
-      thumbnail: null,
-      color: "#336699",
+  // =========================
+  // GIVEAWAY SETTINGS
+  // =========================
+  giveaways: {
+    // Default giveaway duration in milliseconds.
+    // 86400000 = 24 hours.
+    defaultDuration: 86400000,
 
-      footer: {
-        text: "Titan Bot • Soporte",
-        icon: null,
-      },
+    // Allowed winner count range.
+    minimumWinners: 1,
+    maximumWinners: 10,
 
-      button: {
-        label: "Abrir Ticket",
-        emoji: "📩",
-        style: "PRIMARY"
-      }
-    },
+    // Allowed giveaway duration range in milliseconds.
+    // 300000 = 5 minutes.
+    minimumDuration: 300000,
+    // 2592000000 = 30 days.
+    maximumDuration: 2592000000,
 
-    // Mensaje que aparece al crear el ticket
-    ticketCreated: {
-      title: "✅ Ticket Creado",
-      description: "Tu ticket ha sido abierto correctamente.\nEl equipo de soporte te atenderá lo antes posible.",
-      color: "#57F287",
-      image: null
-    }
+    // Role IDs allowed to host giveaways.
+    allowedRoles: [],
+
+    // Role IDs that bypass giveaway restrictions.
+    bypassRoles: [],
+  },
+
+  // =========================
+  // BIRTHDAY SETTINGS
+  // =========================
+  birthday: {
+    // Role ID given to users on their birthday.
+    defaultRole: null,
+
+    // Channel ID where birthday announcements are posted.
+    announcementChannel: null,
+
+    // Timezone used to calculate birthday dates.
+    timezone: "UTC",
   },
 
   // =========================
